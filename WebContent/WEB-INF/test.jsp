@@ -12,6 +12,9 @@
 		<%
 			String attribut = (String) request.getAttribute("message");
 			out.println(attribut);
+			
+			String tryparameter = request.getParameter("try");
+			out.println(tryparameter);	
 		%> 
 	</p>
 </body>

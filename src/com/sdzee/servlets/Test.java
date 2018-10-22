@@ -27,7 +27,8 @@ public class Test extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String m = "Transmission de variables : OK !";
+		String tryparameter = request.getParameter("try");
+		String m = "Transmission de variables : OK !" +" "+ tryparameter;
 		request.setAttribute("message", m);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
 
