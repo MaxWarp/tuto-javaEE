@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-	xmlns="http://java.sun.com/xml/ns/javaee" 
-	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>tuto-javaEE</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -14,18 +11,23 @@
   </welcome-file-list>
   <servlet>
     <description></description>
+    <description>Ma première servlet de test.</description>
     <display-name>Test</display-name>
     <servlet-name>Test</servlet-name>
     <servlet-class>com.sdzee.servlets.Test</servlet-class>
-	<description>Ma première servlet de test.</description>
-	<!--<init-param>
-        <param-name>auteur</param-name> 
-        <param-value>Maxwarp</param-value> 
-    </init-param>-->
-	<!--<load-on-startup>1</load-on-startup>-->
   </servlet>
   <servlet-mapping>
     <servlet-name>Test</servlet-name>
     <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TestEl</display-name>
+    <servlet-name>TestEl</servlet-name>
+    <servlet-class>com.sdzee.servlets.TestEl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestEl</servlet-name>
+    <url-pattern>/testel</url-pattern>
   </servlet-mapping>
 </web-app>

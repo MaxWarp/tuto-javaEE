@@ -5,7 +5,13 @@ public class TestBean {
 	private String roleclass;
 	private String difficultyclass;
 	
+	
+	
 
+	public TestBean() {
+		super();
+
+	}
 	public String getNameclass() {
 		return nameclass;
 	}

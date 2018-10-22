@@ -1,25 +1,21 @@
 package com.sdzee.servlets;
 
 import java.io.IOException;
-
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.sdzee.beans.TestBean;
-
 /**
- * Servlet implementation class Test
+ * Servlet implementation class TestEl
  */
-public class Test extends HttpServlet {
+public class TestEl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Test() {
+    public TestEl() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,22 +25,7 @@ public class Test extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String tryparameter = request.getParameter("try");
-		String m = "Transmission de variables : OK !" +" "+ tryparameter;
-		
-		
-		
-		TestBean firstbean = new TestBean();
-		
-		firstbean.setNameclass("iop");
-		firstbean.setRoleclass("short range dammage dealer");
-		firstbean.setDifficultyclass("easy");
-		
-		request.setAttribute("message", m);
-		request.setAttribute("testbean", firstbean);
-		
-		this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
-
+		this.getServletContext().getRequestDispatcher("/WEB-INF/testel.jsp").forward(request, response);
 	}
 
 	/**
@@ -53,9 +34,5 @@ public class Test extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	}
-	
-	protected void doHead(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	}
-	
+
 }
