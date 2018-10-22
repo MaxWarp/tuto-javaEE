@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.sdzee.beans.TestBean;
+
 /**
  * Servlet implementation class Test
  */
@@ -29,7 +31,16 @@ public class Test extends HttpServlet {
 		// TODO Auto-generated method stub
 		String tryparameter = request.getParameter("try");
 		String m = "Transmission de variables : OK !" +" "+ tryparameter;
+		
+		TestBean firstbean = new TestBean();
+		
+		firstbean.setNameclass("iop");
+		firstbean.setRoleclass("short range dammage dealer");
+		firstbean.setDifficultyclass("easy");
+		
 		request.setAttribute("message", m);
+		request.setAttribute("testbean", firstbean);
+		
 		this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
 
 	}
