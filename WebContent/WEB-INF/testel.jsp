@@ -1,9 +1,10 @@
 <%@ page pageEncoding="UTF-8" %>
+<%@page import="com.sdzee.beans.TestBean"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Insert title here</title>
+<title>Test EL</title>
 </head>
 <body>
 	<p>
@@ -31,7 +32,18 @@
         ${ 1 lt 2 && 8 gt 9 } <br /> 
 
         <!-- Compare le résultat d'un calcul à une valeur fixe. Ici, 6 x 7 vaut 42 et non pas 48, le résultat est false. -->
-        ${ 6 * 7 == 48 } <br /> 
+        ${ 6 * 7 == 48 } <br />
+        ${ empty 'test'} <br />
+        ${ empty ''} <br />
+        ${ !empty ''} <br />
+        ${ 1 gt 2 ? 'oui'  : 'non' } <br />
+        ${ empty 'test' ? 'vide' : 'non  vide'  } <br />
+        <p>12 est inférieur à 8 : ${12 lt 8}</p>
+         
 	</p>
+	 <p>12 est inférieur à 8 : ${12 lt 8}</p>
+	 <p>
+	   <jsp:useBean id="TestBean" class="com.sdzee.beans.TestBean"/>
+	  </p>
 </body>
 </html>
